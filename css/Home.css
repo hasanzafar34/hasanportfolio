@@ -1,0 +1,292 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: rgb(27, 11, 43);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    background-color:  rgb(42, 15, 70);
+    padding: 0px 70px 0px 70px;
+}
+.navbar .logo{
+    font-size: large;
+    font-weight: bolder;
+    color: lavender;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: lavender;
+    padding-left: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: whitesmoke;
+}
+/* Menu bar */
+.menubar{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    width: 25px;
+    height: 3px;
+    margin: 2px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+/* Main Page */
+
+/* Section 1 */
+.section1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6rem;
+}
+.section1 .sec_left{
+    width: 40%;
+}
+.section1 .sec_left .m_text{
+    color: lavender;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.section1 .sec_left .m_text .name{
+    color: rgb(145, 31, 221);
+}
+.section1 .sec_left .b_text{
+    color: rgb(145, 31, 221);
+}
+.buttons{
+    margin-top: 16px;
+}
+.btn{
+    color: lavender;
+    background: none;
+    padding: 6px;
+    font-weight: bold;
+    border: solid lavender 2px;
+    margin-right: 10px;
+}
+.btn:hover{
+    background-color: lavender;
+    color:  rgb(27, 11, 43);
+}
+.section1 .sec_right{
+    width: 40%;
+}
+
+.section1 .sec_right .image{
+    width: 100%;
+}
+
+main hr{
+    border: 0;
+    background-color: whitesmoke;
+    height: 2px;
+    margin: 80px 120px 40px 120px;
+}
+
+/* Section 2 */
+.s1_title{
+    color: lavender;
+    margin-bottom: 10px;
+}
+.s2_title{
+    color: lavender;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+/* DESCRIPTION */
+.WE_des{
+    margin: 0px 70px 60px 70px;
+    color: lavender;
+    font-size: large;
+}
+
+.edu_grid{
+    display: grid;
+    width: 45%;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(auto,2fr);
+}
+
+.footer{
+    height: 8rem;
+    background-color: rgb(42, 15, 70);
+    padding: 20px 70px 20px 70px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.f_title{
+    color: lavender;
+    margin-bottom: 20px;
+}
+.copyright{
+    text-align: end;
+    margin-right: 70px;
+}
+.footer .social_media{
+    padding-left: 240px;
+}
+/* Social Media Items */
+.sm{
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+/* For Tablet and Medium Screen */
+@media screen and (min-width :650px) and (max-width :1000px){
+.section1 .sec_left{
+    width: 50%;
+}
+.section1 .sec_right{
+    width: 30%;
+}
+.s2_title{
+    margin-left: 40px;
+}
+
+main hr{
+    border: 0;
+    background-color: whitesmoke;
+    height: 2px;
+    margin: 50px 38px 40px 38px;
+}
+.WE_des{
+    margin-left: 40px;
+}
+.edu_grid{
+    width: 100%;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    height: 12rem;
+}
+.pas{
+    margin-bottom: 10px;
+    width: 50%;
+}
+.footer{
+    padding: 20px 40px 20px 40px;
+}
+.footer .social_media{
+    padding-left: 0px;
+}
+.copyright{
+    text-align: start;
+    margin-right: 0px;
+}
+}
+
+/* For Mobile and Small Screen */
+@media screen and (max-width :650px) {
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        padding: 0px 30px 0px 30px;
+    }
+        /* Navigation Bar List */
+    .menubar{
+    display: flex;
+    flex-direction: column;
+    }
+    /* Transforming Menubar */
+    .menubar.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menubar.active .bar:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+    .menubar.active .bar:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 3.8rem;
+        gap: 8px;
+        flex-direction: column;
+        background-color: rgba(42, 15, 70, 0.493);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        font-size: medium;
+    }
+    .navitem{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+    /* Main Body */
+    .section1{
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0px 10px 0px 10px;
+    }
+    .section1 .sec_left{
+        width: 100%;
+    }
+    .section1 .sec_right{
+        width: 100%;
+    }
+    main hr{
+        border: 0;
+        background-color: whitesmoke;
+        height: 2px;
+        margin: 50px 18px 40px 18px;
+    }
+    .s2_title{
+        margin: 0px 10px 0px 12px;
+    }
+    .section2{
+        width: 90%;
+    }
+    .WE_des{
+        margin: 0px 10px 0px 12px;
+        width: 95%;
+        margin-bottom: 20px;
+    }
+    .edu_grid{
+        width: 100%;
+    }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        height: 26rem;
+        padding: 5px 10px 5px 10px;
+    }
+    .pas{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .footer .social_media{
+        padding-left: 0px;
+    }
+    .copyright{
+        text-align: start;
+        margin-right: 0px;
+    }
+}

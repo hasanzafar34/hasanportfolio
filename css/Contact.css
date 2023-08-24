@@ -1,0 +1,209 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: rgb(27, 11, 43);
+    font-family: 'Poppins', sans-serif;
+}
+.s2_title{
+    color: lavender;
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    background-color:  rgb(42, 15, 70);
+    padding: 0px 70px 0px 70px;
+}
+.navbar .logo{
+    font-size: large;
+    font-weight: bolder;
+    color: lavender;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: lavender;
+    padding-left: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: whitesmoke;
+}
+/* Menu bar */
+.menubar{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    width: 25px;
+    height: 3px;
+    margin: 2px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Main Page */
+
+/* Section 1 */
+
+/* Left Section */
+.section1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6rem;
+}
+.section1 .sec_left{
+    width: 40%;
+}
+
+/* Get in touch  */
+::placeholder{
+    color: lavender;
+    font-weight: bold;
+}
+.ip_field{
+    outline: none;
+    padding: 10px;
+    background: none;
+    border: solid lavender 1px;
+    caret-color: lavender;
+    color: lavender;
+}
+textarea{
+    font-size: large;
+    font-weight: bold;
+}
+/* Name and Email Field */
+.ne_field{
+    width: 40.3%;
+    height: 1rem;
+}
+/* Subject Field */
+.sub_field{
+    width: 85.5%;
+    height: 1rem;
+    margin-top: 0.4rem;
+}
+/* Message Field */
+.msg_field{
+    width: 85.5%;
+    height: 8rem;
+    margin-top: 0.4rem;
+}
+.sm_btn{
+    width: 25%;
+    height: 2rem;
+    margin-top: 0.4rem;
+
+    background: none;
+    color: lavender;
+    border: solid lavender 2px;
+}
+.sm_btn:hover{
+    color: rgb(42, 15, 70);
+    background-color: lavender;
+    font-weight: bold;
+}
+/* Right Section */
+.section1 .sec_right{
+    width: 40%;
+}
+/* .section1 .sec_right .image{
+    width: 60%;
+} */
+
+.section1 .sec_right .con_div{
+    display: grid;
+    grid-template-columns: 10% 30% 60%;
+    grid-template-rows: repeat(auto,2fr);
+    grid-row-gap: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+.s3_title{
+    color: lavender;
+}
+
+
+/* Responsive Design */
+/* For Tablet and Medium Screen */
+@media screen and (min-width :650px) and (max-width :1000px){
+    .section1{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 20px 70px 20px 70px;
+    }
+    .section1 .sec_left{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .section1 .sec_right{
+        width: 100%;
+    }
+}
+
+/* For Mobile and Small Screen */
+@media screen and (max-width :650px) {
+    .navbar{
+        padding: 0px 30px 0px 30px;
+    }
+        /* Navigation Bar List */
+    .menubar{
+    display: flex;
+    flex-direction: column;
+    }
+    /* Transforming Menubar */
+    .menubar.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menubar.active .bar:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+    .menubar.active .bar:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 3.8rem;
+        gap: 8px;
+        flex-direction: column;
+        background-color: rgba(42, 15, 70, 0.493);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        font-size: medium;
+    }
+    .navitem{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+    /* Main Body */
+    .section1{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 20px 10px 20px 10px;
+    }
+    .section1 .sec_left{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .section1 .sec_right{
+        width: 100%;
+    }
+}

@@ -1,0 +1,165 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: rgb(27, 11, 43);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    background-color:  rgb(42, 15, 70);
+    padding: 0px 70px 0px 70px;
+}
+.navbar .logo{
+    font-size: large;
+    font-weight: bolder;
+    color: lavender;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: lavender;
+    padding-left: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: whitesmoke;
+}
+
+/* Menu bar */
+.menubar{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    width: 25px;
+    height: 3px;
+    margin: 2px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* Main Page */
+
+/* Section 1 */
+.title{
+    color: rgb(145, 31, 221);
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+.pro_cont{
+    width: 88%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pro_cont .project{
+    width: 30%;
+    height: 364px;
+    margin-bottom: 40px;
+}
+.pro_cont .project .pro_img{
+    width: 100%;
+}
+
+.pro_cont .project .pro_title{
+    color: lavender;
+    margin-top: 10px;
+    font-size: large;
+}
+.pro_cont .project .pro_des{
+    margin-top: 12px;
+    font-size: medium;
+    color: lavender;
+}
+.pro_cont .project .pro_btn{
+    width: 40%;
+    margin: 8px 30% 0px 30%;
+    padding: 6px;
+    background: none;
+    border: solid lavender 2px;
+    color: lavender;
+    font-weight: bold;
+}
+.pro_cont .project .pro_btn:hover{
+    background-color: lavender;
+    color: rgb(42, 15, 70);
+}
+/* Responsive Design */
+/* For Tablet and Medium Screen */
+@media screen and (min-width :650px) and (max-width :1000px){
+    .pro_cont{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    .pro_cont .project{
+        width: 40%;
+        margin-bottom: 50px;
+    }
+}
+    
+/* For Mobile and Small Screen */
+@media screen and (max-width :650px) {
+    .navbar{
+        padding: 0px 30px 0px 30px;
+    }
+        /* Navigation Bar List */
+    .menubar{
+    display: flex;
+    flex-direction: column;
+    }
+    /* Transforming Menubar */
+    .menubar.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menubar.active .bar:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+    .menubar.active .bar:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 3.8rem;
+        gap: 8px;
+        flex-direction: column;
+        background-color: rgba(42, 15, 70, 0.493);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        font-size: medium;
+    }
+    .navitem{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+    /* Main Body */
+    .pro_cont{
+        display: flex;
+        flex-direction: column;
+    }
+    .pro_cont .project{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
