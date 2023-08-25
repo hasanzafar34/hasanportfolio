@@ -79,6 +79,7 @@ body{
     border: solid lavender 2px;
     margin-right: 10px;
     cursor: pointer;
+    color: lavender;
 }
 .btn:hover{
     background-color: lavender;
