@@ -73,15 +73,22 @@ body{
     margin-top: 16px;
 }
 .btn{
-    color: lavender;
     background: none;
     padding: 6px;
     font-weight: bold;
     border: solid lavender 2px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .btn:hover{
     background-color: lavender;
+}
+.buttons .btn a{
+    text-decoration: none;
+    color: lavender;
+    font-weight: bold;
+}
+.buttons .btn a:hover{
     color:  rgb(27, 11, 43);
 }
 .section1 .sec_right{
