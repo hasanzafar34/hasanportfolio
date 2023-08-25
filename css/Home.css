@@ -82,6 +82,7 @@ body{
 }
 .btn:hover{
     background-color: lavender;
+    color:  rgb(27, 11, 43);
 }
 .buttons .btn a{
     text-decoration: none;
@@ -91,6 +92,7 @@ body{
 .buttons .btn a:hover{
     color:  rgb(27, 11, 43);
 }
+
 .section1 .sec_right{
     width: 40%;
 }
@@ -141,6 +143,11 @@ main hr{
 .f_title{
     color: lavender;
     margin-bottom: 20px;
+}
+.ps a{
+    text-decoration: none;
+    color: lavender;
+    margin-bottom: 10px;
 }
 .copyright{
     text-align: end;
