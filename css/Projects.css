@@ -70,22 +70,27 @@ body{
 }
 .pro_cont .project{
     width: 30%;
-    height: 364px;
+    height: 380px;
     margin-bottom: 40px;
 }
 .pro_cont .project .pro_img{
     width: 100%;
+    height: 50%;
 }
 
 .pro_cont .project .pro_title{
     color: lavender;
     margin-top: 10px;
     font-size: large;
+    width: 100%;
+    height: 10%;
 }
 .pro_cont .project .pro_des{
     margin-top: 12px;
     font-size: medium;
     color: lavender;
+    width: 100%;
+    height: 30%;
 }
 .pro_cont .project .pro_btn{
     width: 40%;
@@ -95,6 +100,7 @@ body{
     border: solid lavender 2px;
     color: lavender;
     font-weight: bold;
+
 }
 .pro_cont .project .pro_btn:hover{
     background-color: lavender;
